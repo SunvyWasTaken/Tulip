@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tulip", "Tulip\Tulip.vcxproj", "{43258DD9-88C2-4DFD-8F65-B6FBD20DFCD7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{6EBEDD75-C962-4851-91C6-E9B38746058B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{43258DD9-88C2-4DFD-8F65-B6FBD20DFCD7} = {43258DD9-88C2-4DFD-8F65-B6FBD20DFCD7}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43258DD9-88C2-4DFD-8F65-B6FBD20DFCD7}.Debug|x64.ActiveCfg = Debug|x64
+		{43258DD9-88C2-4DFD-8F65-B6FBD20DFCD7}.Debug|x64.Build.0 = Debug|x64
+		{43258DD9-88C2-4DFD-8F65-B6FBD20DFCD7}.Release|x64.ActiveCfg = Release|x64
+		{43258DD9-88C2-4DFD-8F65-B6FBD20DFCD7}.Release|x64.Build.0 = Release|x64
+		{6EBEDD75-C962-4851-91C6-E9B38746058B}.Debug|x64.ActiveCfg = Debug|x64
+		{6EBEDD75-C962-4851-91C6-E9B38746058B}.Debug|x64.Build.0 = Debug|x64
+		{6EBEDD75-C962-4851-91C6-E9B38746058B}.Release|x64.ActiveCfg = Release|x64
+		{6EBEDD75-C962-4851-91C6-E9B38746058B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3719C9D6-C892-4DD7-8E1F-F61337D0E8B3}
+	EndGlobalSection
+EndGlobal
