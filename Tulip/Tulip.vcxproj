@@ -78,7 +78,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>TL_PLATFORM_WINDOWS;TL_BUILD_DLL;TL_RELEASE;TL_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -86,7 +86,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
@@ -103,7 +103,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>TL_PLATFORM_WINDOWS;TL_BUILD_DLL;TL_DEBUG;TL_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -112,7 +112,7 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AdditionalOptions>/MT %(AdditionalOptions)</AdditionalOptions>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
@@ -129,7 +129,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>TL_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>TL_PLATFORM_WINDOWS;TL_BUILD_DLL;TL_DEBUG;TL_RELEASE;TL_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -137,7 +137,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
@@ -155,6 +155,7 @@
     <ClInclude Include="src\Tulip\Application.h" />
     <ClInclude Include="src\Tulip\Core.h" />
     <ClInclude Include="src\Tulip\EntryPoint.h" />
+    <ClInclude Include="src\Tulip\Events\Event.h" />
     <ClInclude Include="src\Tulip\Log.h" />
   </ItemGroup>
   <ItemGroup>

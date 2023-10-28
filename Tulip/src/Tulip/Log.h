@@ -10,9 +10,9 @@ namespace Tulip {
 	{
 	public:
 		static void Init();
-		// Return le Pointeur vers le Log de l'engine
+
 		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
-		// Return le Pointeur vers le Log du l'application
+
 		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
 
 	private:

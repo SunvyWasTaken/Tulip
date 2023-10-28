@@ -26,18 +26,20 @@ project "Tulip"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include"
+		"Tulip/vendor/spdlog/include"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
+		cppdialect "C++20"
 		staticruntime "On"
 		systemversion "latest"
 
 		defines
 		{
-			TL_PLATFORM_WINDOWS,
-			TL_BUILD_DLL,
+			"TL_PLATFORM_WINDOWS",
+			"TL_BUILD_DLL",
+			"TL_DEBUG",
+			"TL_RELEASE"
 		}
 
 		postbuildcommands
@@ -46,11 +48,11 @@ project "Tulip"
 		}
 
 	filter "configurations:Debug"
-		defines "_DEBUG"
+		defines "TL_DEBUG"
 		optimize "On"
 
 	filter "configurations:Release"
-		defines "_RELEASE"
+		defines "TL_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
@@ -66,7 +68,7 @@ project "Sandbox"
 	language "C++"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/ù{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{
@@ -76,7 +78,7 @@ project "Sandbox"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include",
+		"Tulip/vendor/spdlog/include",
 		"Tulip/src"
 	}
 
@@ -86,32 +88,23 @@ project "Sandbox"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
+		cppdialect "C++20"
 		staticruntime "On"
 		systemversion "latest"
 
 		defines
 		{
-			TL_PLATFORM_WINDOWS,
-			TL_BUILD_DLL,
-		}
-
-		postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			"TL_PLATFORM_WINDOWS"
 		}
 
 	filter "configurations:Debug"
-		defines "_DEBUG"
+		defines "TL_DEBUG"
 		optimize "On"
 
 	filter "configurations:Release"
-		defines "_RELEASE"
+		defines "TL_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "TL_DIST"
 		optimize "On"
-
-	filter { "system:windows", "configurations:Release" }
-		buildoptions "/MT"
