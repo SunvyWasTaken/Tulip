@@ -9,6 +9,7 @@ namespace Tulip{
 	{
 		
 	}
+	// Permet d'avoir la boucle 
 	void Application::Run()
 	{
 		while (true)

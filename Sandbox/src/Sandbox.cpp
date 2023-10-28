@@ -1,5 +1,6 @@
 #include <Tulip.h>
 
+// Class enfant pour comme un truc sur unreal engine
 class Sandbox : public Tulip::Application
 {
 	public:
