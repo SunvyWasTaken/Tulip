@@ -1,4 +1,4 @@
 # Directory
 .vs/
-.bin/
-.bin-int/
+bin/
+bin-int/
