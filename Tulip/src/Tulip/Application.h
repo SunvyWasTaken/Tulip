@@ -2,6 +2,7 @@
 #include "Core.h"
 
 namespace Tulip{
+	// Objet qui fait tourné l'application.
 	class TULIP_API Application
 	{
 	public:
