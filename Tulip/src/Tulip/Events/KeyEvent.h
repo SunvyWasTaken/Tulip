@@ -1,7 +1,8 @@
 #pragma once
 
 #include "Event.h"
-#include "Tulip/Core/KeyCodes.h"
+#include "../Core/KeyCodes.h"
+#include <sstream>
 
 namespace Tulip {
 

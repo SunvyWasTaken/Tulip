@@ -104,7 +104,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TL_PLATFORM_WINDOWS;TL_BUILD_DLL;TL_DEBUG;TL_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\src\;vendor\spdlog\include;Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -154,6 +154,8 @@
     <ClInclude Include="src\Tulip.h" />
     <ClInclude Include="src\Tulip\Application.h" />
     <ClInclude Include="src\Tulip\Core.h" />
+    <ClInclude Include="src\Tulip\Core\KeyCodes.h" />
+    <ClInclude Include="src\Tulip\Core\MouseCodes.h" />
     <ClInclude Include="src\Tulip\EntryPoint.h" />
     <ClInclude Include="src\Tulip\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Tulip\Events\Event.h" />
