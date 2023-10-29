@@ -4,28 +4,52 @@
     <Filter Include="Tulip">
       <UniqueIdentifier>{330C310E-9F20-59BF-68A2-FC1ED47555F0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tulip\Events">
+      <UniqueIdentifier>{748a4b15-d019-4e2c-8349-6a70cb8c56a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tulip\Core">
+      <UniqueIdentifier>{495fe99c-852e-463c-8609-5e5f118a2531}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Tulip.h" />
+    <ClInclude Include="src\Tulip\Events\KeyEvent.h">
+      <Filter>Tulip\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Events\MouseEvent.h">
+      <Filter>Tulip\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Events\Event.h">
+      <Filter>Tulip\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Events\ApplicationEvent.h">
+      <Filter>Tulip\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Core\KeyCodes.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Core\MouseCodes.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Tulip\Application.h">
-      <Filter>Tulip</Filter>
+      <Filter>Tulip\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Tulip\Core.h">
-      <Filter>Tulip</Filter>
+      <Filter>Tulip\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Tulip\EntryPoint.h">
-      <Filter>Tulip</Filter>
+      <Filter>Tulip\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Tulip\Log.h">
-      <Filter>Tulip</Filter>
+      <Filter>Tulip\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Tulip\Application.cpp">
-      <Filter>Tulip</Filter>
+      <Filter>Tulip\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Tulip\Log.cpp">
-      <Filter>Tulip</Filter>
+      <Filter>Tulip\Core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
