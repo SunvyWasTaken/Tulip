@@ -10,6 +10,12 @@
     <Filter Include="Tulip\Events">
       <UniqueIdentifier>{B7A09EFF-A303-2EA4-4C89-665A38CBF926}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tulip\Plateform">
+      <UniqueIdentifier>{2CDBC63A-9866-34FF-A177-B7F30D8290FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tulip\Plateform\Windows">
+      <UniqueIdentifier>{66F1E2A0-D228-2B38-DB32-8F5B47E95131}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Tulip.h" />
@@ -31,6 +37,9 @@
     <ClInclude Include="src\Tulip\Core\MouseCodes.h">
       <Filter>Tulip\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tulip\Core\Window.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Tulip\Events\ApplicationEvent.h">
       <Filter>Tulip\Events</Filter>
     </ClInclude>
@@ -43,8 +52,10 @@
     <ClInclude Include="src\Tulip\Events\MouseEvent.h">
       <Filter>Tulip\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tulip\Plateform\Windows\WindowsWindow.h">
+      <Filter>Tulip\Plateform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\tlpch.h" />
-    <ClInclude Include="src\Tulip\Core\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Tulip\Core\Application.cpp">
@@ -52,6 +63,9 @@
     </ClCompile>
     <ClCompile Include="src\Tulip\Core\Log.cpp">
       <Filter>Tulip\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tulip\Plateform\Windows\WindowsWindow.cpp">
+      <Filter>Tulip\Plateform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\tlpch.cpp" />
   </ItemGroup>

@@ -35,9 +35,9 @@ namespace Tulip
 		// Fenetre attribut
 		virtual void SetEventCallBack(const EventCallBackFn& _callback) = 0;
 		virtual void SetVSync(bool _enable) = 0;
-		virtual void IsVSync() const = 0;
+		virtual bool IsVSync() const = 0;
 
-		static Window* Create(const WindowProps& _props = WindowProps());
+		static Window* Create(const WindowProps& props = WindowProps());
 
 	};
 }

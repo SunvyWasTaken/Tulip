@@ -12,4 +12,13 @@
 	#error Tulip only support windows!
 #endif // TL_PLATFORM_WINDOWS
 
+#ifdef TL_CORE_ASSERTS
+	#define TL_ASSERT(x,...) { if(!(x)) { TL_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define TL_CORE_ASSERT(x, ...) { if(!x)) {TL_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+	#define TL_ASSERT(x, ...)
+	#define TL_CORE_ASSERT(x, ...)
+#endif // TL_CORE_ASSERTS
+
+
 #define BIT(x) (1 << x)

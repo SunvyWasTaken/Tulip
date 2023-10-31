@@ -13,6 +13,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Tulip/Core/Log.h"
+
 
 #ifdef TL_PLATFORM_WINDOWS
 	#include <Windows.h>

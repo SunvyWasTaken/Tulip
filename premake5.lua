@@ -41,7 +41,7 @@ project "Tulip"
 	}
 	links
 	{
-		"GLFM",
+		"GLFW",
 		"opengl32.lib"
 	}
 
