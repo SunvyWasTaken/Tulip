@@ -3,10 +3,10 @@
 // For use Tulip application
 // Not include to .cpp in Tulip
 
-#include "Tulip/Application.h"
-#include "Tulip/Log.h"
+#include "Tulip/Core/Application.h"
+#include "Tulip/Core/Log.h"
 
 /************************************************************************/
 /* Entry Point															*/
-#include "Tulip/EntryPoint.h"
+#include "Tulip/Core/EntryPoint.h"
 /************************************************************************/

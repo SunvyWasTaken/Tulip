@@ -8,7 +8,7 @@ extern Tulip::Application* Tulip::CreateApplication();
 int main(int argc, char** argv)
 {
 	// Init les loggers.
-	Tulip::Log::Init();
+	//Tulip::Log::Init();
 	// Test d'utilisation du logger CORE
 	TL_CORE_WARN("Initlized Log!");
 	// Test Logger Client

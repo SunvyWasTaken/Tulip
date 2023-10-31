@@ -4,52 +4,55 @@
     <Filter Include="Tulip">
       <UniqueIdentifier>{330C310E-9F20-59BF-68A2-FC1ED47555F0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Tulip\Events">
-      <UniqueIdentifier>{748a4b15-d019-4e2c-8349-6a70cb8c56a0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Tulip\Core">
-      <UniqueIdentifier>{495fe99c-852e-463c-8609-5e5f118a2531}</UniqueIdentifier>
+      <UniqueIdentifier>{6BC8280D-5780-6A5A-C087-43B6AC5E054B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tulip\Events">
+      <UniqueIdentifier>{B7A09EFF-A303-2EA4-4C89-665A38CBF926}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Tulip.h" />
+    <ClInclude Include="src\Tulip\Core\Application.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Core\Core.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Core\EntryPoint.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Core\KeyCodes.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Core\Log.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Core\MouseCodes.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Events\ApplicationEvent.h">
+      <Filter>Tulip\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Events\Event.h">
+      <Filter>Tulip\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Tulip\Events\KeyEvent.h">
       <Filter>Tulip\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Tulip\Events\MouseEvent.h">
       <Filter>Tulip\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\Tulip\Events\Event.h">
-      <Filter>Tulip\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Tulip\Events\ApplicationEvent.h">
-      <Filter>Tulip\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Tulip\Core\KeyCodes.h">
-      <Filter>Tulip\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Tulip\Core\MouseCodes.h">
-      <Filter>Tulip\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Tulip\Application.h">
-      <Filter>Tulip\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Tulip\Core.h">
-      <Filter>Tulip\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Tulip\EntryPoint.h">
-      <Filter>Tulip\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Tulip\Log.h">
-      <Filter>Tulip\Core</Filter>
-    </ClInclude>
+    <ClInclude Include="src\tlpch.h" />
+    <ClInclude Include="src\Tulip\Core\Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Tulip\Application.cpp">
+    <ClCompile Include="src\Tulip\Core\Application.cpp">
       <Filter>Tulip\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\Tulip\Log.cpp">
+    <ClCompile Include="src\Tulip\Core\Log.cpp">
       <Filter>Tulip\Core</Filter>
     </ClCompile>
+    <ClCompile Include="src\tlpch.cpp" />
   </ItemGroup>
 </Project>

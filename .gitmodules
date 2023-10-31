@@ -1,3 +1,6 @@
 [submodule "Tulip/vendor/spdlog"]
 	path = Tulip/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "Tulip/vendor/GLFM"]
+	path = Tulip/vendor/GLFM
+	url = https://github.com/TheCherno/glfw.git

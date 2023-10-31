@@ -1,4 +1,8 @@
+#include "tlpch.h"
 #include "Application.h"
+
+#include "Tulip/Events/ApplicationEvent.h"
+#include "Tulip/Core/Log.h"
 
 namespace Tulip{
 	Application::Application()

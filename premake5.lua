@@ -10,6 +10,12 @@ workspace "Tulip"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+--include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFM"] = "Tulip/vendor/GLFM/include"
+
+include "Tulip/vendor/GLFM"
+
 project "Tulip"
 	location "Tulip"
 	kind "SharedLib"
@@ -17,6 +23,9 @@ project "Tulip"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "tlpch.h"
+	pchsource "Tulip/src/tlpch.cpp"
 
 	files
 	{
@@ -26,7 +35,14 @@ project "Tulip"
 
 	includedirs
 	{
-		"Tulip/vendor/spdlog/include"
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFM}"
+	}
+	links
+	{
+		"GLFM",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

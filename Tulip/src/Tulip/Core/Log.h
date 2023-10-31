@@ -3,8 +3,6 @@
 #include "Core.h"
 #include "spdlog/spdlog.h"
 
-#include <memory.h>
-
 namespace Tulip {
 	class TULIP_API Log
 	{

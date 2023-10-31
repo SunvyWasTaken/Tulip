@@ -1,11 +1,12 @@
 #pragma once
 
 #include "Event.h"
-#include "../Core/KeyCodes.h"
-#include <sstream>
+#include "Tulip/Core/KeyCodes.h"
+
 
 namespace Tulip {
 
+	// Classe Key event base
 	class KeyEvent : public Event
 	{
 	public:
@@ -27,6 +28,7 @@ namespace Tulip {
 
 		bool IsRepeat() const { return m_IsRepeat; }
 
+		// Donne le KeyCode return
 		std::string ToString() const override
 		{
 			std::stringstream ss;
@@ -55,19 +57,19 @@ namespace Tulip {
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
-	class KeyTypedEvent : public KeyEvent
-	{
-	public:
-		KeyTypedEvent(const KeyCode keycode)
-			: KeyEvent(keycode) {}
+	//class KeyTypedEvent : public KeyEvent
+	//{
+	//public:
+	//	KeyTypedEvent(const KeyCode keycode)
+	//		: KeyEvent(keycode) {}
 
-		std::string ToString() const override
-		{
-			std::stringstream ss;
-			ss << "KeyTypedEvent: " << m_KeyCode;
-			return ss.str();
-		}
+	//	std::string ToString() const override
+	//	{
+	//		std::stringstream ss;
+	//		ss << "KeyTypedEvent: " << m_KeyCode;
+	//		return ss.str();
+	//	}
 
-		EVENT_CLASS_TYPE(KeyTyped)
-	};
+	//	EVENT_CLASS_TYPE(KeyTyped)
+	//};
 }

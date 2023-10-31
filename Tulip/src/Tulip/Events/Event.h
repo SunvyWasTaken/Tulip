@@ -1,9 +1,6 @@
 #pragma once
 
-#include "../Core.h"
-
-#include <string>
-#include <functional>
+#include "Tulip/Core/Core.h"
 
 namespace Tulip
 {
@@ -33,6 +30,7 @@ namespace Tulip
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
+	// Classe de base pour les events
 	class TULIP_API Event
 	{
 		friend class EventDispatcher;

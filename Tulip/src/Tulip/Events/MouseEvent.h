@@ -1,9 +1,8 @@
 #pragma once
 
 #include "Event.h"
-#include "../Core/MouseCodes.h"
+#include "Tulip/Core/MouseCodes.h"
 
-#include <sstream>
 
 namespace Tulip {
 
