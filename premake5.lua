@@ -12,9 +12,9 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 --include directories relative to root folder (solution directory)
 IncludeDir = {}
-IncludeDir["GLFM"] = "Tulip/vendor/GLFM/include"
+IncludeDir["GLFW"] = "Tulip/vendor/GLFW/include"
 
-include "Tulip/vendor/GLFM"
+include "Tulip/vendor/GLFW"
 
 project "Tulip"
 	location "Tulip"
@@ -37,7 +37,7 @@ project "Tulip"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFM}"
+		"%{IncludeDir.GLFW}"
 	}
 	links
 	{
