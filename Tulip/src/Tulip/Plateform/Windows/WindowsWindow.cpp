@@ -1,5 +1,7 @@
 #include "tlpch.h"
 #include "WindowsWindow.h"
+//
+#include <GLFW/glfw3.h>
 
 namespace Tulip
 {

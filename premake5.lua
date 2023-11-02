@@ -11,10 +11,10 @@ workspace "Tulip"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 --include directories relative to root folder (solution directory)
+ModuleDir = "%{prj.name}/vendor/"
 IncludeDir = {}
-IncludeDir["GLFW"] = "Tulip/vendor/GLFW/include"
-
-include "Tulip/vendor/GLFW"
+IncludeDir["GLFW"] = "%{ModuleDir}GLFW/include"
+IncludeDir["spdlog"] = "%{ModuleDir}spdlog/include"
 
 project "Tulip"
 	location "Tulip"
@@ -36,9 +36,10 @@ project "Tulip"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.spdlog}",
 		"%{IncludeDir.GLFW}"
 	}
+
 	links
 	{
 		"GLFW",
@@ -47,6 +48,7 @@ project "Tulip"
 
 	filter "system:windows"
 		cppdialect "C++20"
+		cdialect "C17"
 		staticruntime "On"
 		systemversion "latest"
 
@@ -55,6 +57,7 @@ project "Tulip"
 			"TL_PLATFORM_WINDOWS",
 			"TL_BUILD_DLL",
 			"TL_DEBUG",
+			"TL_CORE_ASSETS",
 			"TL_RELEASE"
 		}
 
@@ -105,6 +108,7 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++20"
+		cdialect "C17"
 		staticruntime "On"
 		systemversion "latest"
 
@@ -124,3 +128,6 @@ project "Sandbox"
 	filter "configurations:Dist"
 		defines "TL_DIST"
 		optimize "On"
+
+
+include "Tulip/vendor/GLFW"

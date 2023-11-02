@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Tulip/Core/Core.h"
+#include "tlpch.h"
 
 namespace Tulip
 {

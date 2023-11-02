@@ -7,7 +7,7 @@
 namespace Tulip{
 	Application::Application()
 	{
-		m_Window = std::unique_ptr<Window>(Window::Create());
+		//m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 	Application::~Application()
 	{
