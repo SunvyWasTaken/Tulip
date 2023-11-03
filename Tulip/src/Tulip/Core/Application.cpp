@@ -4,10 +4,12 @@
 #include "Tulip/Events/ApplicationEvent.h"
 #include "Tulip/Core/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace Tulip{
 	Application::Application()
 	{
-		//m_Window = std::unique_ptr<Window>(Window::Create());
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 	Application::~Application()
 	{

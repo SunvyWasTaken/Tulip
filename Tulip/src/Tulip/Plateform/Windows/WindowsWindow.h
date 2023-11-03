@@ -1,7 +1,7 @@
 #pragma once
 #include "Tulip/Core/Window.h"
 
-struct GLFWwindow;
+#include <GLFW/glfw3.h>
 
 namespace Tulip
 {

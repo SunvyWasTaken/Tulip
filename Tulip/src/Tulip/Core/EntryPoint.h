@@ -15,9 +15,9 @@ int main(int argc, char** argv)
 	int a = 5;
 	TL_CLIENT_INFO("Hello! var = {0}", a);
 
-	//auto app = Tulip::CreateApplication();
-	//app->Run();
-	//delete app;
+	auto app = Tulip::CreateApplication();
+	app->Run();
+	delete app;
 }
 
 #endif // TP_PLATFORM_WINDOWS

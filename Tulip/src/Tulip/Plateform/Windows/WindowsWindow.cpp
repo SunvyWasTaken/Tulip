@@ -1,7 +1,5 @@
 #include "tlpch.h"
 #include "WindowsWindow.h"
-//
-#include <GLFW/glfw3.h>
 
 namespace Tulip
 {
@@ -38,7 +36,7 @@ namespace Tulip
 			s_GLFMInitialized = true;
 		}
 
-		m_Window = glfwCreateWindow(static_cast<int>(props.Width), static_cast<int>(props.Height), m_Data.Title.c_str(), nullptr, nullptr);
+		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
