@@ -23,7 +23,10 @@ namespace Tulip{
 
 	void Application::OnEvent(Event& e)
 	{
-		TL_CORE_INFO("{0}", e.ToString());
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
+
+		TL_CORE_TRACE("{0}", e.ToString());
 	}
 
 	// Permet d'avoir la boucle 
@@ -33,5 +36,11 @@ namespace Tulip{
 		{
 			m_Window->OnUpdate();
 		}
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
+		m_Running = false;
+		return true;
 	}
 }
