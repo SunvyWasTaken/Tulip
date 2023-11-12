@@ -16,9 +16,11 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "%{ModuleDir}GLFW/include"
 IncludeDir["spdlog"] = "%{ModuleDir}spdlog/include"
 IncludeDir["Glad"] = "%{ModuleDir}Glad/include"
+IncludeDir["ImGui"] = "%{ModuleDir}imgui"
 
 include "Tulip/vendor/GLFW"
 include "Tulip/vendor/Glad"
+include "Tulip/vendor/imgui"
 
 
 project "Tulip"
@@ -43,13 +45,15 @@ project "Tulip"
 		"%{prj.name}/src",
 		"%{IncludeDir.spdlog}",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 

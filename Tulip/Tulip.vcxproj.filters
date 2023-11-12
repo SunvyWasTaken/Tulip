@@ -10,8 +10,14 @@
     <Filter Include="Tulip\Events">
       <UniqueIdentifier>{B7A09EFF-A303-2EA4-4C89-665A38CBF926}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tulip\ImGui">
+      <UniqueIdentifier>{9D9BACB2-0951-25A8-9245-1F7FFEF91BAC}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Tulip\Plateform">
       <UniqueIdentifier>{2CDBC63A-9866-34FF-A177-B7F30D8290FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tulip\Plateform\OpenGL">
+      <UniqueIdentifier>{E0BACF6E-CCB4-F8C0-B521-8FD1A1BA5E2D}</UniqueIdentifier>
     </Filter>
     <Filter Include="Tulip\Plateform\Windows">
       <UniqueIdentifier>{66F1E2A0-D228-2B38-DB32-8F5B47E95131}</UniqueIdentifier>
@@ -58,6 +64,12 @@
     <ClInclude Include="src\Tulip\Events\MouseEvent.h">
       <Filter>Tulip\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tulip\ImGui\ImGuiLayer.h">
+      <Filter>Tulip\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Plateform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Tulip\Plateform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Tulip\Plateform\Windows\WindowsWindow.h">
       <Filter>Tulip\Plateform\Windows</Filter>
     </ClInclude>
@@ -75,6 +87,12 @@
     </ClCompile>
     <ClCompile Include="src\Tulip\Core\Log.cpp">
       <Filter>Tulip\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tulip\ImGui\ImGuiLayer.cpp">
+      <Filter>Tulip\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tulip\Plateform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Tulip\Plateform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Tulip\Plateform\Windows\WindowsWindow.cpp">
       <Filter>Tulip\Plateform\Windows</Filter>

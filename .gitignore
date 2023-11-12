@@ -1,4 +1,19 @@
-# Directory
-.vs/
-bin/
+# Binaries
+**/bin/
 bin-int/
+Intermediates/
+
+# Tulip files
+*.log
+
+# VS files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+**.csproj
+
+# Directory
+Tulip/vendor/VulkanSDK
+Application/assets/cache
