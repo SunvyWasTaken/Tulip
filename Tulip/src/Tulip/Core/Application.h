@@ -19,8 +19,12 @@ namespace Tulip{
 		// Dispatch all event throw the application
 		// Call à chaque event.
 		void OnEvent(Event& e);
+
 		void PushOverlay(Layer* layer);
 		void PushLayer(Layer* layer);
+
+		inline static Application& Get() { return *s_Instance; }
+		inline Window& GetWindow() { return* m_Window; }
 
 	private:
 
@@ -29,6 +33,9 @@ namespace Tulip{
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+
+	private:
+		static Application* s_Instance;
 	};
 
 	// A définir dans le CLIENT

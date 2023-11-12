@@ -4,7 +4,7 @@
 
 namespace Tulip
 {
-	class ImGuiLayer : public Layer
+	class TULIP_API ImGuiLayer : public Layer
 	{
 	public:
 		ImGuiLayer();
@@ -16,7 +16,7 @@ namespace Tulip
 		void OnEvent(Event& event);
 
 	private:
-
+		float m_Time = 0.f;
 	};
 }
 

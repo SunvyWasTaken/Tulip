@@ -54,7 +54,6 @@
 #endif
 
 #include "tlpch.h"
-#include "Tulip.h"
 #include "imgui.h"
 #include "ImGuiOpenGLRenderer.h"
 #include "glad/glad.h"
