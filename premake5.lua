@@ -15,6 +15,11 @@ ModuleDir = "%{prj.name}/vendor/"
 IncludeDir = {}
 IncludeDir["GLFW"] = "%{ModuleDir}GLFW/include"
 IncludeDir["spdlog"] = "%{ModuleDir}spdlog/include"
+IncludeDir["Glad"] = "%{ModuleDir}Glad/include"
+
+include "Tulip/vendor/GLFW"
+include "Tulip/vendor/Glad"
+
 
 project "Tulip"
 	location "Tulip"
@@ -37,12 +42,14 @@ project "Tulip"
 	{
 		"%{prj.name}/src",
 		"%{IncludeDir.spdlog}",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -56,6 +63,7 @@ project "Tulip"
 		{
 			"TL_PLATFORM_WINDOWS",
 			"TL_BUILD_DLL",
+			"GLFW_INCLUDE_NONE",
 			"TL_DEBUG",
 			"TL_CORE_ASSETS",
 			"TL_RELEASE"
@@ -68,14 +76,17 @@ project "Tulip"
 
 	filter "configurations:Debug"
 		defines "TL_DEBUG"
+		buildoptions "/MDd"
 		optimize "On"
 
 	filter "configurations:Release"
 		defines "TL_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "TL_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter { "system:windows", "configurations:Release" }
@@ -119,15 +130,16 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "TL_DEBUG"
+		buildoptions "/MDd"
 		optimize "On"
 
 	filter "configurations:Release"
 		defines "TL_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "TL_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
-
-include "Tulip/vendor/GLFW"

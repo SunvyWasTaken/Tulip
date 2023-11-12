@@ -34,8 +34,6 @@ namespace Tulip
 	// Classe de base pour les events
 	class TULIP_API Event
 	{
-		friend class EventDispatcher;
-
 	public:
 		virtual ~Event() = default;
 
@@ -51,12 +49,11 @@ namespace Tulip
 		// 3 = Keyboard
 		// 4 = Mouse
 		// 5 = MouseButton
-		inline bool IsInCategory(EventCategory category)
+		inline bool IsInCategory(EventCategory category)	
 		{
 			return GetCategoryFlags() & category;
 		}
 
-	protected:
 		// Est ce qu'un event à ete pris en compte ou pas.
 		bool Handled = false;
 	};

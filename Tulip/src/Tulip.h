@@ -4,6 +4,7 @@
 // Not include to .cpp in Tulip
 
 #include "Tulip/Core/Application.h"
+#include "Tulip/Core/Layer.h"
 #include "Tulip/Core/Log.h"
 
 /************************************************************************/

@@ -31,6 +31,12 @@
     <ClInclude Include="src\Tulip\Core\KeyCodes.h">
       <Filter>Tulip\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Tulip\Core\Layer.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Tulip\Core\LayerStack.h">
+      <Filter>Tulip\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Tulip\Core\Log.h">
       <Filter>Tulip\Core</Filter>
     </ClInclude>
@@ -59,6 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Tulip\Core\Application.cpp">
+      <Filter>Tulip\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tulip\Core\Layer.cpp">
+      <Filter>Tulip\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Tulip\Core\LayerStack.cpp">
       <Filter>Tulip\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Tulip\Core\Log.cpp">
