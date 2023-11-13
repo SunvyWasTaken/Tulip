@@ -22,6 +22,7 @@ include "Tulip/vendor/GLFW"
 include "Tulip/vendor/Glad"
 include "Tulip/vendor/imgui"
 
+startproject "Sandbox"
 
 project "Tulip"
 	location "Tulip"

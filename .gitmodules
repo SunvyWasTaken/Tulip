@@ -4,3 +4,6 @@
 [submodule "Tulip/vendor/imgui"]
 	path = Tulip/vendor/imgui
 	url = https://github.com/SunvyWasTaken/imgui.git
+[submodule "Tulip/vendor/GLFW"]
+	path = Tulip/vendor/GLFW
+	url = https://github.com/SunvyWasTaken/glfw.git
